@@ -112,7 +112,7 @@
 
     var loadChat = function(cb) {
         if (!cb) cb = function() {};
-        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+        $.get('https://rawgit.com/Depys/MeuBot/master/langIndex.json', function(json) {
             var link = basicBot.chatLink;
             if (json !== null && typeof json !== 'undefined') {
                 langIndex = json;
@@ -258,10 +258,10 @@
         retrieveSettings: retrieveSettings,
         retrieveFromStorage: retrieveFromStorage,
         settings: {
-            botName: 'basicBot',
+            botName: 'bGodcop',
             language: 'english',
             chatLink: 'https://rawgit.com/basicBot/source/master/lang/en.json',
-            scriptLink: 'https://rawgit.com/basicBot/source/master/basicBot.js',
+            scriptLink: 'https://rawgit.com/Depys/MeuBot/master/basicBot.js',
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 1, // 1-200
             startupVolume: 0, // 0-100
@@ -2745,7 +2745,7 @@
                         }));
                         var argument = msg.substring(cmd.length + 1);
 
-                        $.get('https://rawgit.com/basicBot/source/master/lang/langIndex.json', function(json) {
+                        $.get('https://rawgit.com/Depys/MeuBot/master/langIndex.json', function(json) {
                             var langIndex = json;
                             var link = langIndex[argument.toLowerCase()];
                             if (typeof link === 'undefined') {
